@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --portfolio-bg: #f6f4ee;
+  --portfolio-surface: #f8f6f1;
+  --portfolio-card: #ffffff;
+  --portfolio-text: #1f2937;
+  --portfolio-muted: #6b7280;
+  --portfolio-border: #e5e1d8;
+  --portfolio-accent: #b45309;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+}
