@@ -58,7 +58,10 @@ export default function Contact() {
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--portfolio-muted)]">
           Contact
         </p>
-        <h2 className="text-3xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-5xl">
+        <h2
+          className="text-3xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-5xl"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
           Let’s connect professionally
         </h2>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-[var(--portfolio-muted)] md:text-base">

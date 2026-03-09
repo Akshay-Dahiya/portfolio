@@ -59,7 +59,10 @@ export default function CaseStudies() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--portfolio-muted)]">
               Legal Case Studies
             </p>
-            <h2 className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl">
+            <h2
+              className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
               Work beyond titles
             </h2>
             <p className="mt-5 text-sm leading-7 text-[var(--portfolio-muted)] md:text-base">
@@ -121,7 +124,7 @@ export default function CaseStudies() {
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[var(--portfolio-text)]">{study.contribution}</p>
                   </div>
-                  <div className="rounded-xl border border-amber-200 bg-amber-50/70 p-3">
+                  <div className="rounded-xl border border-pink-200 bg-pink-50/70 p-3">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--portfolio-accent)]">
                       Outcome
                     </p>
@@ -155,4 +158,3 @@ export default function CaseStudies() {
     </section>
   );
 }
-

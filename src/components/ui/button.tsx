@@ -4,18 +4,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "group relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap rounded-full text-sm font-medium transition-[transform,color,box-shadow] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--portfolio-accent)]/45 disabled:pointer-events-none disabled:opacity-50",
+  "group relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap rounded-full text-sm font-medium transition-[transform,filter,box-shadow,color,border-color,background-color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d77aa8]/40 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-[var(--portfolio-text)] text-white shadow-[0_10px_24px_rgba(31,41,55,0.28),inset_0_1px_0_rgba(255,255,255,0.25)] hover:-translate-y-0.5 hover:bg-[var(--portfolio-text)]/92",
+          "border border-[#9b2f62] bg-gradient-to-b from-[#cf5f96] to-[#a43d71] text-white shadow-[inset_0_0.24rem_0.65rem_rgba(255,255,255,0.3),inset_0_-0.16rem_0.45rem_rgba(110,33,69,0.45),0_0.7rem_1.5rem_rgba(118,45,82,0.3)] hover:-translate-y-0.5 hover:brightness-105",
         outline:
-          "border border-[var(--portfolio-border)] bg-white/78 text-[var(--portfolio-text)] shadow-[0_8px_20px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.85)] hover:-translate-y-0.5 hover:bg-white",
+          "border border-[#ebc4d8] bg-white/95 text-[#6b2348] shadow-[inset_0_0.2rem_0.5rem_rgba(255,255,255,0.9),0_0.5rem_1.1rem_rgba(118,45,82,0.12)] hover:-translate-y-0.5 hover:border-[#d98ab2] hover:bg-[#fff6fa]",
         secondary:
-          "border border-[var(--portfolio-border)] bg-[var(--portfolio-surface)] text-[var(--portfolio-text)] shadow-[0_6px_16px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:bg-white",
-        ghost: "text-[var(--portfolio-muted)] hover:bg-white/60 hover:text-[var(--portfolio-text)]",
-        link: "text-[var(--portfolio-text)] underline-offset-4 hover:underline",
+          "border border-[#f1d7e5] bg-[#fff6fa] text-[#762c52] shadow-[inset_0_0.15rem_0.4rem_rgba(255,255,255,0.8),0_0.45rem_0.95rem_rgba(118,45,82,0.1)] hover:-translate-y-0.5 hover:border-[#d98ab2] hover:bg-white",
+        ghost: "text-[#7a2b52] hover:bg-[#fff1f7] hover:text-[#5d1c3d]",
+        link: "text-[#a43d71] underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",

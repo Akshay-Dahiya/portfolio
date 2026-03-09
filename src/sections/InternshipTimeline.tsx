@@ -179,7 +179,10 @@ export default function InternshipTimeline() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--portfolio-muted)]">
             Experience Timeline
           </p>
-          <h2 className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl">
+          <h2
+            className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
             Professional exposure and university leadership
           </h2>
           <p className="mt-5 text-sm leading-7 text-[var(--portfolio-muted)] md:text-base">
@@ -201,7 +204,7 @@ export default function InternshipTimeline() {
             </div>
 
             <div className="relative pl-8">
-              <div className="absolute left-3 top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-[var(--portfolio-accent)] via-amber-500/60 to-[var(--portfolio-border)]" />
+              <div className="absolute left-3 top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-[var(--portfolio-accent)] via-pink-400/60 to-[var(--portfolio-border)]" />
               <div className="space-y-6">
                 {internships.map((item, index) => {
                   const Icon = item.icon;
@@ -211,7 +214,7 @@ export default function InternshipTimeline() {
                       key={item.org}
                       className="relative rounded-2xl border border-[var(--portfolio-border)] bg-[var(--portfolio-surface)] p-5"
                     >
-                      <span className="absolute -left-[2.05rem] top-7 flex h-7 w-7 items-center justify-center rounded-full border border-amber-300 bg-white text-[11px] font-semibold text-[var(--portfolio-accent)]">
+                      <span className="absolute -left-[2.05rem] top-7 flex h-7 w-7 items-center justify-center rounded-full border border-pink-300 bg-white text-[11px] font-semibold text-[var(--portfolio-accent)]">
                         {index + 1}
                       </span>
 
@@ -248,7 +251,7 @@ export default function InternshipTimeline() {
           </div>
 
           <div className="rounded-[30px] border border-[var(--portfolio-border)] bg-[var(--portfolio-card)] p-6 shadow-[0_8px_28px_rgba(0,0,0,0.06)] md:p-8">
-            <div className="mb-8 rounded-2xl border border-amber-200 bg-amber-50/70 p-5">
+            <div className="mb-8 rounded-2xl border border-pink-200 bg-pink-50/70 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--portfolio-accent)]">
                 SGT University
               </p>

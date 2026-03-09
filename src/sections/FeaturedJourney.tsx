@@ -6,13 +6,13 @@ const items = [
     title: "Mr. Abhimanyu Mahajan",
     subtitle: "Legal Intern",
     description: "Drafted and reviewed legal documents, researched statutes and precedents, supported case preparation, and maintained case briefs.",
-    icon: <FileText className="h-5 w-5 text-amber-700" />,
+    icon: <FileText className="h-5 w-5 text-pink-700" />,
   },
   {
     title: "Adv. Manik Goyal / Nyayasarthak",
     subtitle: "Legal Intern · Pro Bono",
     description: "Prepared plaints, written statements, affidavits, and legal notices while improving drafting precision and procedural understanding.",
-    icon: <Scale className="h-5 w-5 text-amber-600" />,
+    icon: <Scale className="h-5 w-5 text-pink-600" />,
   },
   {
     title: "DGS Associates",
@@ -30,7 +30,7 @@ const items = [
     title: "Shri Mohit Kumar Prasad",
     subtitle: "Legal Intern · Senior Civil Judge",
     description: "Assisted in legal research, assignments, draft notes, and analytical work with valuable exposure to judicial functioning.",
-    icon: <BriefcaseBusiness className="h-5 w-5 text-amber-600" />,
+    icon: <BriefcaseBusiness className="h-5 w-5 text-pink-600" />,
   },
 ];
 
@@ -43,10 +43,13 @@ export default function FeaturedJourney() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--portfolio-muted)]">
               Featured Experience
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl">
+            <h2
+              className="text-3xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
               Priyal’s legal journey,
               <br />
-              <span className="bg-gradient-to-r from-amber-700 via-amber-600 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-pink-700 via-fuchsia-600 to-rose-500 bg-clip-text text-transparent">
                 presented with motion
               </span>
             </h2>
@@ -82,7 +85,7 @@ export default function FeaturedJourney() {
                       <p className="text-sm text-[var(--portfolio-muted)]">{item.subtitle}</p>
                     </div>
                   </div>
-                  <div className="mb-4 h-px w-full bg-gradient-to-r from-amber-400 via-amber-300 to-transparent opacity-70" />
+                  <div className="mb-4 h-px w-full bg-gradient-to-r from-pink-400 via-rose-300 to-transparent opacity-70" />
                   <p className="text-sm leading-7 text-[var(--portfolio-muted)]">{item.description}</p>
                 </div>
               ))}

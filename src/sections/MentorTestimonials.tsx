@@ -61,7 +61,10 @@ export default function MentorTestimonials() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--portfolio-muted)]">
               Mentor Feedback
             </p>
-            <h2 className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl">
+            <h2
+              className="text-4xl font-semibold tracking-tight text-[var(--portfolio-text)] md:text-6xl"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
               Verified internship references
             </h2>
             <p className="mt-5 text-sm leading-7 text-[var(--portfolio-muted)] md:text-base">
@@ -118,7 +121,7 @@ export default function MentorTestimonials() {
               </div>
 
               <p className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--portfolio-muted)]">
-                <Star className="h-3.5 w-3.5 text-amber-500" />
+                <Star className="h-3.5 w-3.5 text-pink-500" />
                 {mentor.verification}
               </p>
             </article>

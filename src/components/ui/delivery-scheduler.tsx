@@ -13,14 +13,14 @@ interface DeliverySchedulerProps {
 }
 
 const scheduleButtonVariants = cva(
-  "relative isolate inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-[transform,color,box-shadow,background-color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--portfolio-accent)]/40 disabled:pointer-events-none disabled:opacity-50",
+  "relative isolate inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-[transform,color,box-shadow,background-color,border-color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d77aa8]/40 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "border border-[var(--portfolio-border)] bg-white/70 text-[var(--portfolio-text)] shadow-[0_6px_14px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-md hover:-translate-y-0.5 hover:bg-white",
+          "border border-[#ebc4d8] bg-white/92 text-[#6b2348] shadow-[inset_0_0.18rem_0.5rem_rgba(255,255,255,0.92),0_0.5rem_1.05rem_rgba(118,45,82,0.12)] hover:-translate-y-0.5 hover:border-[#d98ab2] hover:bg-[#fff6fa]",
         selected:
-          "border border-amber-300 bg-[var(--portfolio-accent)] text-white shadow-[0_10px_22px_rgba(180,83,9,0.35),inset_0_1px_0_rgba(255,255,255,0.25)]",
+          "border border-[#9b2f62] bg-gradient-to-b from-[#cf5f96] to-[#a43d71] text-white shadow-[inset_0_0.22rem_0.6rem_rgba(255,255,255,0.24),inset_0_-0.1rem_0.24rem_rgba(110,33,69,0.44),0_0.75rem_1.4rem_rgba(118,45,82,0.28)]",
       },
     },
     defaultVariants: {
@@ -135,7 +135,7 @@ export function DeliveryScheduler({
                     {isSelected && (
                       <motion.div
                         layoutId="date-selector"
-                        className="absolute inset-0 z-0 rounded-lg bg-[var(--portfolio-accent)]"
+                        className="absolute inset-0 z-0 rounded-lg bg-gradient-to-b from-[#cf5f96] to-[#a43d71]"
                         initial={{ scale: 0.55, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.55, opacity: 0 }}
@@ -170,7 +170,7 @@ export function DeliveryScheduler({
                     {isSelected && (
                       <motion.div
                         layoutId="time-selector"
-                        className="absolute inset-0 z-0 rounded-lg bg-[var(--portfolio-accent)]"
+                        className="absolute inset-0 z-0 rounded-lg bg-gradient-to-b from-[#cf5f96] to-[#a43d71]"
                         initial={{ scale: 0.55, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.55, opacity: 0 }}
@@ -199,7 +199,7 @@ export function DeliveryScheduler({
             disabled={!selectedTime}
             className={cn(
               scheduleButtonVariants({ variant: "selected" }),
-              "bg-[var(--portfolio-accent)] px-5",
+              "px-5",
             )}
           >
             Schedule

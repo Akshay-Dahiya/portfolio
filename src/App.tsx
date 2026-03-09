@@ -18,7 +18,7 @@ export default function App() {
         staticity={55}
         ease={90}
         size={0.7}
-        color="#8a7f6c"
+        color="#a47f95"
       />
       <div className="relative z-10">
         <Hero />

@@ -9,20 +9,6 @@ export function WovenLightHero() {
   const buttonControls = useAnimation();
 
   useEffect(() => {
-    const fontId = "woven-light-hero-fonts";
-    let createdFontLink = false;
-    let link = document.getElementById(fontId) as HTMLLinkElement | null;
-
-    if (!link) {
-      link = document.createElement("link");
-      link.id = fontId;
-      link.href =
-        "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap";
-      link.rel = "stylesheet";
-      document.head.appendChild(link);
-      createdFontLink = true;
-    }
-
     textControls.start((index) => ({
       opacity: 1,
       y: 0,
@@ -37,19 +23,13 @@ export function WovenLightHero() {
       opacity: 1,
       transition: { delay: 1.5, duration: 0.75 },
     });
-
-    return () => {
-      if (createdFontLink && link) {
-        document.head.removeChild(link);
-      }
-    };
   }, [textControls, buttonControls]);
 
   const headline = "Priyal Sanjeev Kumar";
 
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[var(--portfolio-surface)]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(251,191,36,0.22),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(249,115,22,0.16),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(148,163,184,0.18),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(236,72,153,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(217,70,239,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(148,163,184,0.16),transparent_45%)]" />
       <WovenCanvas />
       <HeroNav />
 
@@ -106,20 +86,33 @@ export function WovenLightHero() {
             type="button"
             variant="solid"
             size="lg"
+            className="min-w-[210px] font-semibold tracking-[0.02em]"
             onClick={() =>
               document.getElementById("highlights")?.scrollIntoView({ behavior: "smooth" })
             }
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Explore Moments
+            Explore Defining Moments
             <ArrowDownRight className="h-4 w-4" />
           </LiquidButton>
 
-          <LiquidButton asChild size="lg" variant="subtle" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <LiquidButton
+            asChild
+            size="lg"
+            variant="default"
+            className="min-w-[132px] font-semibold"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             <a href="#contact">Connect</a>
           </LiquidButton>
 
-          <LiquidButton asChild size="lg" variant="subtle" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <LiquidButton
+            asChild
+            size="lg"
+            variant="default"
+            className="min-w-[160px] font-semibold"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             <a href="/Priyal-Sanjeev-Kumar-CV.pdf" download="Priyal-Sanjeev-Kumar-CV.pdf">
               Download CV
               <Download className="h-4 w-4" />
@@ -172,16 +165,18 @@ const HeroNav = () => {
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
-          <LiquidButton asChild size="sm" variant="subtle" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <LiquidButton asChild size="sm" variant="subtle" className="px-3 sm:px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
             <a href="#internships">
-              Internship Timeline
+              <span className="hidden sm:inline">Internship Timeline</span>
+              <span className="sm:hidden">Timeline</span>
               <ArrowDownRight className="h-3.5 w-3.5" />
             </a>
           </LiquidButton>
-          <LiquidButton asChild size="sm" variant="subtle" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <LiquidButton asChild size="sm" variant="subtle" className="px-3 sm:px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
             <a href="https://zoom.us/meeting/schedule" target="_blank" rel="noreferrer">
-              Schedule Meeting
+              <span className="hidden sm:inline">Schedule Meeting</span>
+              <span className="sm:hidden">Meeting</span>
               <CalendarClock className="h-3.5 w-3.5" />
             </a>
           </LiquidButton>
@@ -228,7 +223,7 @@ const WovenCanvas = () => {
     const torusKnot = new THREE.TorusKnotGeometry(1.45, 0.42, 200, 32);
     const sourcePositions = torusKnot.attributes.position;
     const sourceCount = sourcePositions.count;
-    const palette = ["#111827", "#374151", "#92400e", "#78350f", "#475569"];
+    const palette = ["#111827", "#374151", "#a74f76", "#8a3f72", "#475569"];
 
     for (let i = 0; i < particleCount; i += 1) {
       const vertexIndex = i % sourceCount;

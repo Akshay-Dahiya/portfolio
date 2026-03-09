@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
-  --portfolio-bg: #f6f4ee;
-  --portfolio-surface: #f8f6f1;
+  --portfolio-bg: #f8f2f5;
+  --portfolio-surface: #fbf7f9;
   --portfolio-card: #ffffff;
   --portfolio-text: #1f2937;
   --portfolio-muted: #6b7280;
-  --portfolio-border: #e5e1d8;
-  --portfolio-accent: #b45309;
+  --portfolio-border: #eadce4;
+  --portfolio-accent: #bf5f8f;
+  --portfolio-accent-soft: #f5d7e6;
 }
 
 html,
@@ -16,8 +18,48 @@ body,
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--portfolio-bg);
   color: var(--portfolio-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--portfolio-accent) 30%, white);
+  color: var(--portfolio-text);
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--portfolio-accent) 45%, white);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background-color: color-mix(in oklab, var(--portfolio-muted) 55%, white);
 }

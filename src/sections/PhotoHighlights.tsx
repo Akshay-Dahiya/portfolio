@@ -202,7 +202,7 @@ export default function PhotoHighlights() {
                     </span>
                   </div>
 
-                  <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.13em] text-amber-700">
+                  <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-pink-50/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.13em] text-pink-700">
                     <PrimaryIcon className="h-3.5 w-3.5" />
                     {primaryMoment.impact}
                   </div>
