@@ -38,6 +38,7 @@ const contacts = [
 ];
 
 export default function Contact() {
+  const cvHref = `${import.meta.env.BASE_URL}Priyal-Sanjeev-Kumar-CV.pdf`;
   const [selectionMessage, setSelectionMessage] = useState("");
 
   const handleSchedule = ({ date, time }: { date: Date; time: string }) => {
@@ -76,7 +77,7 @@ export default function Contact() {
             return (
               <a
                 key={item.label}
-                href={item.href}
+                href={item.download ? cvHref : item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noreferrer" : undefined}
                 download={item.download}

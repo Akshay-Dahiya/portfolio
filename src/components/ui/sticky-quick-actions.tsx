@@ -22,6 +22,8 @@ const actions = [
 ];
 
 export function StickyQuickActions() {
+  const cvHref = `${import.meta.env.BASE_URL}Priyal-Sanjeev-Kumar-CV.pdf`;
+
   return (
     <div className="pointer-events-none fixed bottom-20 left-1/2 z-[72] w-[min(94vw,460px)] -translate-x-1/2 md:bottom-4 md:left-4 md:w-auto md:translate-x-0">
       <div className="pointer-events-auto flex items-center justify-center gap-2 rounded-full border border-[var(--portfolio-border)] bg-white/92 p-2 shadow-[0_14px_30px_rgba(0,0,0,0.13)] backdrop-blur-md">
@@ -37,7 +39,7 @@ export function StickyQuickActions() {
               className="px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.13em]"
             >
               <a
-                href={item.href}
+                href={item.download ? cvHref : item.href}
                 download={item.download}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noreferrer" : undefined}

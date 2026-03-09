@@ -5,6 +5,7 @@ import * as THREE from "three";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
 export function WovenLightHero() {
+  const cvHref = `${import.meta.env.BASE_URL}Priyal-Sanjeev-Kumar-CV.pdf`;
   const textControls = useAnimation();
   const buttonControls = useAnimation();
 
@@ -113,7 +114,7 @@ export function WovenLightHero() {
             className="min-w-[160px] font-semibold"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            <a href="/Priyal-Sanjeev-Kumar-CV.pdf" download="Priyal-Sanjeev-Kumar-CV.pdf">
+            <a href={cvHref} download="Priyal-Sanjeev-Kumar-CV.pdf">
               Download CV
               <Download className="h-4 w-4" />
             </a>
